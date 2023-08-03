@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UT" F-8">
+    <meta http-equiv=X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor só</title>
+    <link rel="stylesheet" href="style.css">]
+
+
+
+    <style>
+        body {
+            background-color: rgb(207, 207, 207);
+            background-image: url(./Captura\ de\ tela\ 2023-05-20\ 014150.png);
+            background-size: 100%;
+
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            top: 17%;
+            left: 25%;
+            font-size: 30px;
+        }
+    </style>
+
+    <h1>Kayblack e Baco Exu do Blues - Melhor só (Contradições)</h1>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="melhor-so-video">
+            <video src="yt5s.com-Melhor Só - Kayblack e Baco Exu do Blues [ EP - CONTRADIÇÕES ]-(1080p).mp4"
+                width="1600" height="700" autoplay muted loop>
+                <source>
+            </video>
+        </div>
+        <div class="melhor-so-video">
+            <audio id="audio"
+                src="yt5s.com-Melhor Só - Kayblack e Baco Exu do Blues [ EP - CONTRADIÇÕES ]-(1080p).mp4"></audio>
+        </div>
+
+        <button id="playButton">Play</button>
+    </div>
+    <script>
+
+        var isPlaying = false;
+        var audio = document.getElementById("audio");
+        var playButton = document.getElementById("playButton");
+
+        playButton.addEventListener("click", function () {
+            if (isPlaying) {
+                pause();
+                isPlaying = false;
+            } else {
+                play();
+                isPlaying = true;
+            }
+        });
+
+        function play() {
+            audio.play();
+            playButton.textContent = "Pause";
+        }
+
+        function pause() {
+            audio.pause();
+            playButton.textContent = "Play";
+        }
+    </script>
+
+    </div>
+    <div class="veigh-recomendado">
+        <a href="index2.html">
+            <img src="Veigh Dos Predios Deluxe.webp" width="300" alt="">
+        </a>
+        <h3>Novo Balanço</h3>
+
+</body>
+
+</html>

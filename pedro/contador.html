@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginas - Projetos</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(30, 30, 30);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        max-width: 1280px;
+        margin: auto;
+
+    }
+
+
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    header {
+        width: 100%;
+        padding: 10px 4px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 1s;
+        background-color: white;
+    }
+
+    header ul {
+        list-style-type: none;
+    }
+
+    header ul li {
+        display: inline-block;
+        margin: 0 40px;
+        font-size: 25px;
+
+    }
+
+
+    header ul li a {
+        color: rgb(30, 30, 30);
+        text-decoration: none;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    .container2 {
+
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 30px;
+        color: white;
+    }
+
+    .flex2 {
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        font-size: 27px;
+        margin: 5px;
+    }
+
+    #result{
+        color: white;
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <header id="header">
+            <div class="container">
+
+                <div class="flex">
+
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="container2">
+            <div class="flex2">
+
+                <h1>CONTADOR</h1>
+
+                <h2>Valor final:</h2>
+                <input type="number" id="final"><br>
+
+                <br>
+
+                <h2>Variação:</h2>
+                <input type="number" id="variacao"> <br>
+
+                <br>
+                <button onclick="contador()">Iniciar</button>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div id="result">
+
+        </div>
+        <script>
+            var result = document.getElementById("result")
+            function contador() {
+                let final = document.getElementById("final").value
+                let variacao = document.getElementById("variacao").value
+                let contador = 0
+                while (contador <= Number(final)) {
+                    // console.log(contador)
+                    result.innerHTML += contador + "<br>"
+                    contador = contador + Number(variacao)
+                }
+            }
+        </script>
+</body>
+
+</html>

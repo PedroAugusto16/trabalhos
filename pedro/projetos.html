@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina - Projetos</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(30, 30, 30);
+    }
+
+    html {
+        height: 100vh;
+    }
+
+    .container {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header {
+        width: 100%;
+        padding: 60px 4px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 1s;
+    }
+
+    header li a:hover {
+        color: white;
+    }
+
+    header.rolagem {
+        background-color: rgb(30, 30, 30);
+        padding: 20px;
+    }
+
+
+    header.rolagem i {
+        color: white;
+    }
+
+    header ul {
+        list-style-type: none;
+    }
+
+
+    header ul li {
+        display: inline-block;
+        margin: 0 40px;
+        font-size: 25px;
+    }
+
+    header ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .container2 {
+        margin: 230px auto;
+    }
+
+    .flex2 {
+        display: flex;
+        justify-content: space-around;
+        color: white;
+    }
+
+    a {
+        color: rgb(255, 83, 21);
+        text-shadow: 2px 2px black;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+    h1:hover {
+        color: white;
+    }
+
+    .flex3 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .flex3 img {
+        border-radius: 10%;
+        border: 3px solid black;
+    }
+</style>
+
+<body>
+    <header id="header">
+        <div class="container">
+
+            <div class="flex">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container2">
+        <div class="flex2">
+            <a href="contador.html">Contador</a>
+            <a href="tabuada.html">Tabuada</a>
+            <a href="index2.html">Musicas</a>
+        </div>
+
+        <div class="flex3">
+            <a href="contador.html"><img src="mao.png" height="480"></a>
+            <a href="tabuada.html"><img src="tabuada.png" height="480"></a>
+            <a href="index2.html"><img src="Veigh Dos Predios Deluxe.webp" height="480" width="350"></a>
+        </div>
+
+    </div>
+</body>
+
+</html>

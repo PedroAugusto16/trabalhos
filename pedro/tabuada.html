@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina - Tabuada</title>
+</head>
+<style>
+    body {
+        background-color: rgb(30, 30, 30);
+        width: 920px auto;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header {
+        width: 100%;
+        padding: 10px 4px;
+        transition: 1s;
+        background-color: white;
+        top: 0;
+        left: 0;
+    }
+
+    header ul {
+        list-style-type: none;
+    }
+
+
+    header ul li {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 25px;
+    }
+
+    header ul li a,
+    .banner h1 a {
+        color: rgb(30, 30, 30);
+        text-decoration: none;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    #cabecalho {
+        background-color: rgb(30, 30, 30);
+        display: flex;
+        justify-content: center;
+    }
+
+    #pergunta {
+        display: flex;
+        justify-content: center;
+    }
+
+    #pergunta div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    label,
+    input {
+        margin-bottom: 10px;
+    }
+
+    #resposta {
+        text-align: center;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .res {
+        border: 2px solid rgb(255, 255, 255);
+        width: 350px;
+        height: 500px;
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 15px;
+
+    }
+
+    button {
+        color: white;
+        background-color: rgb(30, 30, 30);
+        height: 45px;
+        width: 100px;
+    }
+
+    input {
+        color: white;
+        background-color: rgb(30, 30, 30);
+        height: 50px;
+        font-size: 25px;
+    }
+
+    #central {
+        display: flex;
+    }
+</style>
+
+<body>
+    <header id="header">
+        <div class="container">
+
+            <div class="flex">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <header id="cabecalho">
+        <h1>TABUADA</h1>
+    </header>
+
+    <section id="pergunta">
+        <div>
+            <label>Qual o número que você deseja ver a tabuada?</label>
+            <center>
+                <input type="number" id="numero">
+            </center>
+            <center>
+                <button onclick="tabuada()">Ver Tabuada</button>
+            </center>
+        </div>
+    </section>
+    <section id="resposta">
+        <div class="res" id="ad">Adição
+            <hr>
+        </div>
+        <div class="res" id="sub">Subtração
+            <hr>
+        </div>
+        <div class="res" id="mult">Multiplicação
+            <hr>
+        </div>
+        <div class="res" id="div">Divisão
+            <hr>
+        </div>
+    </section>
+
+    <script>
+        function tabuada() {
+            let numero = Number(document.querySelector("#numero").value)
+            let adicao = document.querySelector("#ad")
+            let subtracao = document.querySelector("#sub")
+            let multiplicacao = document.querySelector("#mult")
+            let divisao = document.querySelector("#div")
+
+            for (i = 0; i <= 10; i++) {
+                soma = numero + i
+                sub = i + numero
+                mult = numero * i
+                div = i * numero
+                adicao.innerHTML += numero + " + " + i + " = " + soma + "<br>"
+                subtracao.innerHTML += sub + " - " + numero + " = " + i + "<br>"
+                multiplicacao.innerHTML += numero + " &#215 " + i + " = " + mult + "<br>"
+                divisao.innerHTML += div + " &#xf7 " + numero + " = " + i + "<br>"
+            }
+        }
+    </script>
+</body>
+
+</html>

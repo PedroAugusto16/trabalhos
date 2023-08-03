@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Balanço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="novo-balanço-video">
+            <video src="yt5s.com-1. VEIGH - NOVO BALANÇO (Dos Prédios Deluxe)-(1080p).mp4" width="1600" height="700"
+                autoplay muted loop>
+                <source>
+            </video>
+        </div>
+        <div class="novo-balanço-audio">
+            <audio id="audio" src="yt5s.com-1. VEIGH - NOVO BALANÇO (Dos Prédios Deluxe)-(1080p).mp4"></audio>
+        </div>
+    </div class>
+    <button id="playButton">Play</button>
+    </div>
+    <h1>1. VEIGH - NOVO BALANÇO (Dos Prédios Deluxe)</h1>
+    <script>
+
+        var isPlaying = false;
+        var audio = document.getElementById("audio");
+        var playButton = document.getElementById("playButton");
+
+        playButton.addEventListener("click", function () {
+            if (isPlaying) {
+                pause();
+                isPlaying = false;
+            } else {
+                play();
+                isPlaying = true;
+            }
+        });
+
+        function play() {
+            audio.play();
+            playButton.textContent = "Pause";
+        }
+
+        function pause() {
+            audio.pause();
+            playButton.textContent = "Play";
+        }
+
+    </script>
+    <div class="kay-recomendado">
+        <a href="kay1.html">
+            <img src="Captura de tela 2023-05-20 014150.png" width="350" alt="">
+        </a>
+        <h3>Melhor só</h3>
+    </div>
+</body>
+
+</html>

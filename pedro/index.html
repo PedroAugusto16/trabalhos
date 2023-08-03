@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina - Incio</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(30, 30, 30);
+    }
+
+    html {
+        height: 200vh;
+        scroll-behavior: smooth;
+    }
+
+    .container {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header {
+        width: 100%;
+        padding: 60px 4px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 1s;
+    }
+
+    header li a:hover {
+        color: white;
+    }
+
+    header.rolagem {
+        background-color: rgb(30, 30, 30);
+        padding: 20px;
+    }
+
+    header.rolagem a,
+    header.rolagem i {
+        color: white;
+    }
+
+    header ul {
+        list-style-type: none;
+    }
+
+
+    header ul li {
+        display: inline-block;
+        margin: 0 40px;
+        font-size: 25px;
+    }
+
+    header ul li a,
+    .banner h1 a {
+        color: rgb(30, 30, 30);
+        text-decoration: none;
+    }
+
+    .banner {
+        height: 100vh;
+        background-image: url(fencing-Sport_HD_Wallpaper_2560x1600.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(30, 30, 30);
+    }
+
+    .banner h1 {
+        font-size: 5em;
+    }
+
+    .banner h1 a:hover {
+        color: white;
+    }
+
+
+    p {
+        color: white;
+        font-size: 35px;
+        margin-top: 300px;
+        padding: 210px;
+        margin: 3px;
+    }
+</style>
+
+
+<body>
+    <header id="header">
+        <div class="container">
+
+            <div class="flex">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <h1><a href="#p">Pedro Augusto</a></h1>
+    </section>
+
+    <section id="p">
+        <p> Pedro Augusto - 2A <br>
+
+            Esses são alguns dos varios sites que programei ao longo desses 2 bimestres. <br>
+            <br>
+            <br>
+            Musicas JAVASCRIPT <br>
+         
+            Desenvolvido em casa, feito para treino.<br>
+            <br>
+            <br>
+            <br>
+            Contador JAVASCRIPT <br>
+        
+            Desenvolvido com a ajuda do professor, proposta da atividade era ciar um contador
+            com que escolheriamos o valor final e a variação até chegar no valor final. <br>
+            <br>
+            <br>
+            <br>
+            Tabuada JAVASCRIPT <br>
+          
+            Desenvolvido com a ajuda do professor, prosposta da ativida era criar uma tabuada
+            que selecionamos um numero, e a calculadora mostraria a tabuada até o 10. Das operações de
+            mais " + ", menos " - ", divisao " / " e muilplicação " * ".
+        </p>
+    </section>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            let header = document.querySelector('#header')
+            header.classList.toggle('rolagem', window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>
